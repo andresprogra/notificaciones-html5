@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Notificaciones... by Andrés Domínguez</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="notificaciones.js"></script>
+	<style type="text/css">
+		form{
+			width: 80%;
+			margin: 10px auto;
+		}
+		form label{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		form .btn{
+			float: right;
+			margin: 15px;
+		}
+		#Label-nuevo{
+			width: 100%;
+			padding: 10px;
+			margin-top: 10px;
+
+		}
+	</style>
+</head>
+<body>
+	<form action="#">
+		<h1>Nombre</h1>
+		<input onclick="this.value=='';"class="form-control" id="nombre" type="text" >
+		<h1>Apellido</h1>
+		<input class="form-control" type="text" id="apellido">
+		<!--<input class="btn btn-success btn-lg" type="submit" id="boton" value="Enviar">-->
+		<a href="#Label-nuevo" class="btn btn-success btn-lg" id="boton">Enviar</a>
+	</form>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<div class="tabla-nombre col-xs-5 col-xs-offset-1">
+		<h2 class="col-xs-12" id="NombreAlumno">Nombre</h2>
+	</div>
+	<div class="tabla-apellidos col-xs-5">
+		<h2 class="col-xs-12" id="ApellidoAlumno">Apellido</h2>
+	</div>	
+	<hr class="col-xs-10 col-xs-offset-1" />
+		
+	<!--<a href="javascript:agregarElemento();" >Agregar elemento</a>-->
+</body>
+</html>
