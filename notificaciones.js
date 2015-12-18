@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded',function() {
+
 	document.getElementById('boton').addEventListener('click',function(){
 		if(! ('Notification' in window) ){
 			alert("Servicio no disponible para tu dispositivo");
@@ -40,4 +41,5 @@ document.addEventListener('DOMContentLoaded',function() {
 
 	});
 });
+
 
