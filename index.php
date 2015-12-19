@@ -99,10 +99,10 @@
 				<!--<?php for ($i=0; $i < $result1-1 ; $i++) {  ?>-->
 					<?php $result2 = pg_send_query($conexion, "SELECT nombre FROM notificaciones WHERE id=1;");  ?>
 
-					$res1 = pg_get_result($conexion);
+					$res1 = pg_get_result($result2);
 
 					<!--<?php echo $result2; ?>-->
-					<label id="Label-nuevo"><?php echo $res1 ?></label>
+					<label id="Label-nuevo"><?php $res1 ?></label>
 				<?php } ?>
 			</div>
 			<div class="tabla-apellidos col-xs">
