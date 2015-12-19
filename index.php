@@ -83,7 +83,8 @@
 				<h3>Comentarios</h3>
 				<textarea class="form-control" type="text" name="comentario"></textarea>
 				<!--<input class="btn btn-success btn-lg" type="submit" id="boton" value="Enviar">-->
-				<a href="#Label-nuevo" class="btn" id="boton">Enviar</a>
+				<!--<a href="#Label-nuevo" class="btn" id="boton">Enviar</a>-->
+				<input type="submit" class="btn" id="boton" />
 			</form>
 		</section>
 		<section class="col-xs bg row">
