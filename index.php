@@ -73,7 +73,7 @@
 	</header>
 	<div class="row container center">
 		<section class="col-xs bg">
-			<form action="#">
+			<form method="post" action="user.php">
 				<h3>Nombre</h3>
 				<input onclick="this.value=='';"class="form-control" id="nombre" type="text"  name="name">
 				<h3>Apellido</h3>
