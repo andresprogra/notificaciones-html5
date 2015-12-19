@@ -97,9 +97,12 @@
 			<div class="tabla-nombre col-xs">
 				<h3 class="col-xs" id="nombrealumno">Nombre</h3>
 				<!--<?php for ($i=0; $i < $result1-1 ; $i++) {  ?>-->
-					<?php $result2 = pg_query($conexion, "SELECT nombre FROM notificaciones WHERE id=1;"); ?>
+					<?php $result2 = pg_send_query($conexion, "SELECT nombre FROM notificaciones WHERE id=1;");  ?>
+
+					$res1 = pg_get_result($conexion);
+
 					<!--<?php echo $result2; ?>-->
-					<label id="Label-nuevo"><?php echo $result2 ?></label>
+					<label id="Label-nuevo"><?php echo $res1 ?></label>
 				<?php } ?>
 			</div>
 			<div class="tabla-apellidos col-xs">
