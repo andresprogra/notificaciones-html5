@@ -111,8 +111,9 @@
 		<section class="col-xs bg row">
 			<div class="tabla-nombre col-xs">
 				<h3 class="col-xs" id="nombrealumno">Nombre</h3>
-				<?php for ($i=0; $i < $result1 ; $i++) {  ?>
-					<?php $result2 = pg_query($conexion, "SELECT nombre FROM notificaciones WHERE id=$i;"); ?>
+				<?php for ($i=0; $i < $result1-1 ; $i++) {  ?>
+					<?php $result2 = pg_query($conexion, "SELECT nombre FROM notificaciones WHERE id='$i';"); ?>
+					<?php echo $result2; ?>
 					<label id="Label-nuevo"><?php echo $result2 ?></label>
 				<?php } ?>
 			</div>
