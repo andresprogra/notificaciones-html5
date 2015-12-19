@@ -1,8 +1,15 @@
 <?php
-include("conexion.php");
-
-
+$db_host="138.128.189.242";
+$db_user="revistet_html";
+$db_password="platzi.com123";
+$db_name="revistet_html";
 $db_table_name="notificaciones";
+//$db_table_name="nombre_de_tabla";
+$db_connection = mysql_connect($db_host, $db_user, $db_password);
+
+
+
+
 
  
 if (!$db_connection) {
