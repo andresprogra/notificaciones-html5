@@ -20,7 +20,7 @@ $last = utf8_decode($_POST['last']);
 $pais = utf8_decode($_POST['pais']);
 $comentario = utf8_decode($_POST['comentario']);
  
-$resultado=mysql_query("SELECT * FROM ".$db_table_name." WHERE Email = '".$subs_email."'", $db_connection);
+//$resultado=mysql_query("SELECT * FROM ".$db_table_name." WHERE Email = '".$subs_email."'", $db_connection);
  
 
 	
