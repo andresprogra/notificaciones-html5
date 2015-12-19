@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
 	document.getElementById('boton').addEventListener('click',function(){
 		if(! ('Notification' in window) ){
-			alert("Servicio no disponible para tu dispositivo");
+			alert("Servicio no disponible para tu dispositivo.");
 			return;
 		}
 		Notification.requestPermission(function(permission){	
@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded',function() {
 		label.setAttribute("id","Label-nuevo");
 		labeltext = document.createTextNode(nombre.value);
 		label.appendChild(labeltext);
-		document.getElementById('NombreAlumno').appendChild(label);
+		document.getElementById('nombrealumno').appendChild(label);
 		
 		var nuevoLabel = document.createElement("label");
 		nuevoLabel.setAttribute("id","Label-nuevo");
 		labeltext = document.createTextNode(apellido.value);
 		nuevoLabel.appendChild(labeltext);
-		document.getElementById('ApellidoAlumno').appendChild(nuevoLabel);
+		document.getElementById('apellidoalumno').appendChild(nuevoLabel);
 		/*
 		var Nombre = document.getElementById('labels');
 		Nombre.innerHTML = nombre.value;*/
