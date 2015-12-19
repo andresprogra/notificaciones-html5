@@ -13,7 +13,7 @@ $conn_string = "host=ec2-107-21-224-11.compute-1.amazonaws.com port=5432 dbname=
 $conexion = pg_connect($conn_string);
 //conectarse a una base de datos llamada "test" en el host "sheep" con el nombre de usuario y password
 
-$result = pg_query($conexion, "INSERT INTO notificaciones(nombre, last, pais, comentario) 
+$result = pg_query($conexion, "INSERT INTO notificaciones(nombre, last, pais, comentarios) 
                   VALUES('$name', '$last', '$pais', '$comentario');");
 
 
