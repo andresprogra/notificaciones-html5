@@ -7,12 +7,15 @@ $last = $_POST['last'];
 $pais = $_POST['pais'];
 $comentario = $_POST['comentario'];
 
-$link = mysql_connect("andresdominguez.mx", "revistet_html", "platzi.com123") or die ('Mal');
-mysql_select_db("revistet_html",$link);
-$sql = "INSERT INTO notificaciones (nombre, last, pais, comentario) ".
-     "VALUES ('$nombre', '$last', '$pais', '$comentario')";
-$result = mysql_query($sql);
-echo "¡Gracias! Hemos recibido sus datos.\n"; 
+
+
+$conn_string = "host=ec2-107-21-224-11.compute-1.amazonaws.com port=5432 dbname=delt70p4uoagga user=bdodcgxjiyfxvh password=wDEMh9FzNIWOMWRBs31w8n18uB";
+$conexion = pg_connect($conn_string);
+//conectarse a una base de datos llamada "test" en el host "sheep" con el nombre de usuario y password
+
+$result = pg_query($conexion, "INSERT INTO notificaciones(nombre, last, pais, comentario) 
+                  VALUES('$name', '$last', '$pais', '$comentario');");
+
 
 
 	
