@@ -7,35 +7,23 @@ $db_table_name="notificaciones";
 //$db_table_name="nombre_de_tabla";
 $db_connection = mysql_connect($db_host, $db_user, $db_password);
 
+$name = $_POST['name'];
+$last = $_POST['last'];
+$pais = $_POST['pais'];
+$comentario = $_POST['comentario'];
 
+$link = mysql_connect("andresdominguez.mx", "revistet_html", "platzi.com123");
+mysql_select_db("revistet_html",$link);
+$sql = "INSERT INTO notificaciones (nombre, last, pais, comentario) ".
+     "VALUES ('$nombre', '$last', '$pais', '$comentario')";
+$result = mysql_query($sql);
+echo "¡Gracias! Hemos recibido sus datos.\n"; 
 
-
-
- 
-if (!$db_connection) {
-	die('No se ha podido conectar a la base de datos');
-}
-$name = utf8_decode($_POST['name']);
-$last = utf8_decode($_POST['last']);
-$pais = utf8_decode($_POST['pais']);
-$comentario = utf8_decode($_POST['comentario']);
- 
-//$resultado=mysql_query("SELECT * FROM ".$db_table_name." WHERE Email = '".$subs_email."'", $db_connection);
- 
 
 	
-$insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` ('nombre' , 'last' , 'pais' , 'comentarios') VALUES ("' . $name . '", "' . $last . '", "' . $pais . '", "' . $comentario . '")';
- 
-mysql_select_db($db_name, $db_connection);
-$retry_value = mysql_query($insert_value, $db_connection);
- 
-if (!$retry_value) {
-   die('Error: ' . mysql_error());
-}
-	
-header('Location: index.php');
+//header('Location: index.php');
 
  
-mysql_close($db_connection);
+//mysql_close($db_connection);
 ?>
 
