@@ -75,9 +75,13 @@
 		<section class="col-xs bg">
 			<form action="#">
 				<h3>Nombre</h3>
-				<input onclick="this.value=='';"class="form-control" id="nombre" type="text" >
+				<input onclick="this.value=='';"class="form-control" id="nombre" type="text"  name="name">
 				<h3>Apellido</h3>
-				<input class="form-control" type="text" id="apellido">
+				<input class="form-control" type="text" id="apellido" name="last">
+				<h3>Pais</h3>
+				<input class="form-control" type="text" id="pais" name="pais">
+				<h3>Comentarios</h3>
+				<textarea class="form-control" type="text" name="comentario"></textarea>
 				<!--<input class="btn btn-success btn-lg" type="submit" id="boton" value="Enviar">-->
 				<a href="#Label-nuevo" class="btn" id="boton">Enviar</a>
 			</form>
@@ -88,8 +92,12 @@
 			</div>
 			<div class="tabla-apellidos col-xs">
 				<h3 class="col-xs" id="apellidoalumno">Apellido</h3>
-			</div>	
+			</div>
+			<div class="tabla-pais col-xs">
+				<h3 class="col-xs" id="pais">Pais</h3>
+			</div>		
 		</section>
+
 	</div>
 	<br />
 	<hr class="col-xs-10 col-xs-offset-1" />
