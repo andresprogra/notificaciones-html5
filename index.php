@@ -79,6 +79,8 @@
 		$result=pg_query($conexion, "SELECT * FROM notificaciones;");
 
 		$row = pg_fetch_array($result);
+		$row1 = pg_fetch_array($result);
+		$row2 = pg_fetch_array($result);
 
 	?>
 
