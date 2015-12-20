@@ -109,16 +109,16 @@
 			</div>
 			<div class="tabla-apellidos col-xs">
 				<h3 class="col-xs" id="apellidoalumno">Apellido</h3>
-				<?php $row = nothing ?>
-				<?php while($row=pg_fetch_array($result)){ ?>
-					<h3 id="Label-nuevo"><?php echo $row[2] ?></h3>
+				
+				<?php while($row1=pg_fetch_array($result)){ ?>
+					<h3 id="Label-nuevo"><?php echo $row1[2] ?></h3>
 				<?php } ?>
 			</div>
 			<div class="tabla-pais col-xs">
-				<?php $row = nothing ?>
+				
 				<h3 class="col-xs" id="pais">Pais</h3>
-				<?php while($row=pg_fetch_array($result)){ ?>
-					<h3 id="Label-nuevo"><?php echo $row[3] ?></h3>
+				<?php while($row2=pg_fetch_array($result)){ ?>
+					<h3 id="Label-nuevo"><?php echo $row2[3] ?></h3>
 				<?php } ?>
 			</div>		
 		</section>
