@@ -76,11 +76,13 @@
 		$conexion = pg_connect($conn_string);
 
 		//selecciono campos para mostrarlos(todos)
-		$result=pg_query($conexion, "SELECT * FROM notificaciones;");
+		$result=pg_query($conexion, "SELECT nombre FROM notificaciones;");
+		$result1=pg_query($conexion, "SELECT last FROM notificaciones;");
+		$result2=pg_query($conexion, "SELECT pais FROM notificaciones;");
 
 		$row = pg_fetch_array($result);
-		$row1 = pg_fetch_array($result);
-		$row2 = pg_fetch_array($result);
+		$row1 = pg_fetch_array($result1);
+		$row2 = pg_fetch_array($result2);
 
 	?>
 
