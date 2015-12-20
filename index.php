@@ -102,18 +102,22 @@
 		<section class="col-xs bg row">
 			<div class="tabla-nombre col-xs">
 				<h3 class="col-xs" id="nombrealumno">Nombre</h3>
-				<?php
-				while($row=pg_fetch_array($result)){
-					echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr> \n"; //muestro cada campo de la BD en su respectiva cabecera de la tabla.
-				}
-				?>
+				<?php while($row=pg_fetch_array($result)){ ?>
+					<label id="Label-nuevo"><?php $row[1] ?></label>
+				<?php } ?>
 
 			</div>
 			<div class="tabla-apellidos col-xs">
 				<h3 class="col-xs" id="apellidoalumno">Apellido</h3>
+				<?php while($row=pg_fetch_array($result)){ ?>
+					<label id="Label-nuevo"><?php $row[2] ?></label>
+				<?php } ?>
 			</div>
 			<div class="tabla-pais col-xs">
 				<h3 class="col-xs" id="pais">Pais</h3>
+				<?php while($row=pg_fetch_array($result)){ ?>
+					<label id="Label-nuevo"><?php $row[3] ?></label>
+				<?php } ?>
 			</div>		
 		</section>
 
