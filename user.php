@@ -19,7 +19,7 @@ $result = pg_query($conexion, "INSERT INTO notificaciones(nombre, last, pais, co
 
 
 	
-//header('Location: index.php');
+header('Location: index.php');
 
  
 //mysql_close($db_connection);
