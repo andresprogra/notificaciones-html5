@@ -107,7 +107,7 @@
 			<div class="tabla-nombre col-xs">
 				<h3 class="col-xs" id="nombrealumno">Nombre</h3>
 				<?php while($row=pg_fetch_array($result)){ ?>
-					<h3 id="Label-nuevo"><?php echo $row[1] ?></h3>
+					<h3 id="Label-nuevo"><?php echo $row ?></h3>
 				<?php } ?>
 
 			</div>
@@ -115,14 +115,14 @@
 				<h3 class="col-xs" id="apellidoalumno">Apellido</h3>
 				
 				<?php while($row1=pg_fetch_array($result)){ ?>
-					<h3 id="Label-nuevo"><?php echo $row1[2] ?></h3>
+					<h3 id="Label-nuevo"><?php echo $row1 ?></h3>
 				<?php } ?>
 			</div>
 			<div class="tabla-pais col-xs">
 				
 				<h3 class="col-xs" id="pais">Pais</h3>
 				<?php while($row2=pg_fetch_array($result)){ ?>
-					<h3 id="Label-nuevo"><?php echo $row2[3] ?></h3>
+					<h3 id="Label-nuevo"><?php echo $row2 ?></h3>
 				<?php } ?>
 			</div>		
 		</section>
