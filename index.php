@@ -114,14 +114,14 @@
 			<div class="tabla-apellidos col-xs">
 				<h3 class="col-xs" id="apellidoalumno">Apellido</h3>
 				
-				<?php while($row1=pg_fetch_array($result)){ ?>
+				<?php while($row1=pg_fetch_array($result1)){ ?>
 					<h3 id="Label-nuevo"><?php echo $row1[0] ?></h3>
 				<?php } ?>
 			</div>
 			<div class="tabla-pais col-xs">
 				
 				<h3 class="col-xs" id="pais">Pais</h3>
-				<?php while($row2=pg_fetch_array($result)){ ?>
+				<?php while($row2=pg_fetch_array($result2)){ ?>
 					<h3 id="Label-nuevo"><?php echo $row2[0] ?></h3>
 				<?php } ?>
 			</div>		
