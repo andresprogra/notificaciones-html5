@@ -71,6 +71,18 @@
 			<img width="200px" src="http://www.andresdominguez.mx/img/logo2.png">
 		</div>
 	</header>
+	<?php 
+		$conn_string = "host=ec2-107-21-224-11.compute-1.amazonaws.com port=5432 dbname=delt70p4uoagga user=bdodcgxjiyfxvh password=wDEMh9FzNIWOMWRBs31w8n18uB";
+		$conexion = pg_connect($conn_string);
+
+		//selecciono campos para mostrarlos(todos)
+		$result=pg_query($conexion, "SELECT * FROM notificaciones;");
+
+		$row = pg_fetch_array($result);
+
+	?>
+
+
 	<div class="row container center">
 		<section class="col-xs bg">
 			<form method="post" action="user.php">
@@ -90,6 +102,11 @@
 		<section class="col-xs bg row">
 			<div class="tabla-nombre col-xs">
 				<h3 class="col-xs" id="nombrealumno">Nombre</h3>
+				<?php
+				while($row=pg_fetch_array($result)){
+				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr> \n"; //muestro cada campo de la BD en su respectiva cabecera de la tabla.
+				}
+				?>
 			</div>
 			<div class="tabla-apellidos col-xs">
 				<h3 class="col-xs" id="apellidoalumno">Apellido</h3>
