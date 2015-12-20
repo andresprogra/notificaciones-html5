@@ -99,31 +99,15 @@
 				<input type="submit" class="btn" id="boton" />
 			</form>
 		</section>
-		<?php			
-			$conn_string = "host=ec2-107-21-224-11.compute-1.amazonaws.com port=5432 dbname=delt70p4uoagga user=bdodcgxjiyfxvh password=wDEMh9FzNIWOMWRBs31w8n18uB";
-			$conexion = pg_connect($conn_string);
-			//conectarse a una base de datos llamada "test" en el host "sheep" con el nombre de usuario y password
-			$result1 = pg_query($conexion, "SELECT COUNT(*) FROM notificaciones;");
-		?>
 		<section class="col-xs bg row">
 			<div class="tabla-nombre col-xs">
 				<h3 class="col-xs" id="nombrealumno">Nombre</h3>
-<<<<<<< HEAD
 				<?php
 				while($row=pg_fetch_array($result)){
-				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr> \n"; //muestro cada campo de la BD en su respectiva cabecera de la tabla.
+					echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr> \n"; //muestro cada campo de la BD en su respectiva cabecera de la tabla.
 				}
 				?>
-=======
-				<!--<?php for ($i=0; $i < $result1-1 ; $i++) {  ?>-->
-					<?php $result2 = pg_send_query($conexion, "SELECT nombre FROM notificaciones WHERE id=1;");  ?>
 
-					$res1 = pg_get_result($result2);
-
-					<!--<?php echo $result2; ?>-->
-					<label id="Label-nuevo"><?php $res1 ?></label>
-				<?php } ?>
->>>>>>> fb9f3d2a0b58072f61606a1574163c90d850d109
 			</div>
 			<div class="tabla-apellidos col-xs">
 				<h3 class="col-xs" id="apellidoalumno">Apellido</h3>
