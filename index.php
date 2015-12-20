@@ -72,9 +72,6 @@
 		</div>
 	</header>
 	<?php 
-		$conn_string = "host=ec2-107-21-224-11.compute-1.amazonaws.com port=5432 dbname=delt70p4uoagga user=bdodcgxjiyfxvh password=wDEMh9FzNIWOMWRBs31w8n18uB";
-		$conexion = pg_connect($conn_string);
-
 		//selecciono campos para mostrarlos(todos)
 		$result=pg_query($conexion, "SELECT nombre FROM notificaciones;");
 		$result1=pg_query($conexion, "SELECT last FROM notificaciones;");
