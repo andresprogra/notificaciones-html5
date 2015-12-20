@@ -72,6 +72,7 @@
 		</div>
 	</header>
 	<?php 
+		include("http://andresdominguez.mx/con.php");
 		//selecciono campos para mostrarlos(todos)
 		$result=pg_query($conexion, "SELECT nombre FROM notificaciones;");
 		$result1=pg_query($conexion, "SELECT last FROM notificaciones;");
