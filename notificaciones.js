@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
 			setTimeout(function(){
 				notification.close();
-			},50000);
+			},5000);
 			
 		});
 		var label = document.createElement("label");
@@ -29,12 +29,6 @@ document.addEventListener('DOMContentLoaded',function() {
 		labeltext = document.createTextNode(apellido.value);
 		nuevoLabel.appendChild(labeltext);
 		document.getElementById('apellidoalumno').appendChild(nuevoLabel);
-		/*
-		var Nombre = document.getElementById('labels');
-		Nombre.innerHTML = nombre.value;*/
-
-		/*var Apellido = document.getElementById('ape');
-		Apellido.innerHTML = apellido.value;*/
 		var apelli = document.getElementById('apellido').value;
 		apelli.innerHTML = "Andres";
 
