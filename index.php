@@ -90,11 +90,11 @@
 		<section class="col-xs bg">
 			<form method="post" action="user.php">
 				<h3>Nombre</h3>
-				<input onclick="this.value=='';"class="form-control" id="nombre" type="text"  name="name">
+				<input onclick="this.value=='';"class="form-control" id="nombre" type="text"  name="name" required>
 				<h3>Apellido</h3>
-				<input class="form-control" type="text" id="apellido" name="last">
+				<input class="form-control" type="text" id="apellido" name="last" required>
 				<h3>Pais</h3>
-				<input class="form-control" type="text" id="pais" name="pais">
+				<input class="form-control" type="text" id="pais" name="pais" required>
 				<h3>Comentarios</h3>
 				<textarea class="form-control" type="text" name="comentario"></textarea>
 				<!--<input class="btn btn-success btn-lg" type="submit" id="boton" value="Enviar">-->
